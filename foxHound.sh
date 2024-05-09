@@ -5,7 +5,7 @@ catchOrRelease () {
                 echo "$1 - valid install location"
         else
                 echo "$1 - invalid install location"
-                rm -rf $1
+                rm -rf "$1"
         fi
 }
 export -f catchOrRelease
