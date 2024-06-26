@@ -2,9 +2,9 @@
 
 catchOrRelease () {
         if [[ $1 == "/Applications/Firefox.app" ]]; then
-                echo "$1 - valid install location"
+                echo "$1 - keeping valid install location"
         else
-                echo "$1 - invalid install location"
+                echo "$1 - removing invalid install location"
                 rm -rf "$1"
         fi
 }
