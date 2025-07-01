@@ -1,5 +1,5 @@
 #kill firefox processes running from AppData
-Get-Process "firefox" | Where-Object {{$_.Path -match "AppData"} | Stop-Process -Force
+Get-Process "firefox" | Where-Object {$_.Path -match "AppData"} | Stop-Process -Force
 
 #get the location of all helper.exes in AppData
 $uninstallPaths = $(Get-ChildItem "C:\Users\*\AppData\Local\Mozilla Firefox\uninstall\helper.exe").FullName
